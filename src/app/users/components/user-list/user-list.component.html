@@ -1,0 +1,17 @@
+<div class="card-container">
+  <div *ngFor="let user of users" class="user-card">
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="avatar"></div>
+        <mat-card-title>{{ user.name.first }} {{ user.name.last }}</mat-card-title>
+        <mat-card-subtitle>{{ user.login.username }}</mat-card-subtitle>
+      </mat-card-header>
+      <img [src]="user.picture.large" alt="Imagen de usuario">
+      <mat-card-content>
+        <p>Gender: {{ user.gender }}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Phone: {{ user.phone }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
